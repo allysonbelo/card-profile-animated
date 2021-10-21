@@ -28,6 +28,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    border:  4px solid  #7c48cf;
+    border-radius: 5px;
+    padding: 50px;
 }
 
 .box {
