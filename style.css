@@ -1,0 +1,90 @@
+:root {
+    --color-bg: #182c41;
+    --color-one: #be57f1;
+    --color-two: #00ffbf;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--color-bg);
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.card{
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    border-radius: 50%;
+    background: linear-gradient(#7c48cf, #5d53ed);
+}
+
+.box::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: 
+    linear-gradient(to left, var(--color-one), var(--color-two), #38E05B, orange );
+    animation: animate 4s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+        
+    }
+
+    100% {
+        transform: rotate(360deg);
+        
+    }
+}
+
+.box::after {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    background: var(--color-bg);
+    border-radius: 50%;
+    background-image: url(./foto1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center  /   center;
+}
+
+.title{
+    margin-top: 1em;
+    color: white;
+    font-size: 2em;
+}
+
+.work{
+    color: rgb(209, 209, 209);
+    font-size: 1.5em;
+    font-weight: 100;
+}
